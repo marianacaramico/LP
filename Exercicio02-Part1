@@ -1,3 +1,17 @@
+/* Crie um projeto java chamado EleicaoMitica.
+
+Nele, cria a classe Eleicao no pacote modelo. Essa classe possui os atributos "candidato1", "candidato2", "brancos", "nulos" e "resultado". Todos, menos o último são números inteiros, pois representam a quantidade de votos em cada um.
+
+Crie 4 métodos de voto, um para cada candidato e um para branco e outro para nulo. Esses métodos incrementam em 1 o respectivo contador de votos.
+
+Crie um método público sem retorno chamado "encerrarVotacao". Ao ser invocado ele atualiza o "resultado" com o nome do vencedor ("Candidato 1" ou "Candidato 2").
+O vencedor é sempre o candidato1 ou candidato2, quem dentre eles tiver mais votos. Pode haver empate.
+
+Crie um método público que retorne o resultado.
+
+Crie métodos que retornem a quantidade de votos em cada candidato e brancos e nulos...
+*/
+
 package modelo;
 
 
