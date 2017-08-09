@@ -1,3 +1,7 @@
+/* ... Crie a classe AppVotacao no pacote app. Ela deve conter um método main. Ao ser executada, ela instancia uma Eleicao com 10 votos. A cada voto, pergunte ao usuário se votará em um dos candidatos ou branco ou nulo.
+
+Ao final, exiba o vencedor e as quantidades de voto em cada candidato e em branco/nulo.
+*/
 package app;
 
 import modelo.Eleicao;
