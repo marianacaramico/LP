@@ -24,6 +24,7 @@ public class AppBoletim {
         double notaDois = leitor.nextDouble();
         boletim2.alteracaoNota2(notaDois);
         System.out.println("Boletim 2 - Média: "+boletim2.getMedia()+". Resultado: "+boletim2.getResultado());
+        
     }
     
 }
