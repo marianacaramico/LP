@@ -1,4 +1,4 @@
-/*... Crie uma classe AppBoletim no pacote app.
+/* ... Crie uma classe AppBoletim no pacote app.
 Essa classe deve instanciar 2 boletins. Para cada boletim, pergunte ao usuário as 2 notas e depois exiba suas médias e resultado.
 */
 
