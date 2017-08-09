@@ -1,6 +1,21 @@
+/* Exercício 01
+Crie um projeto chamado "BoletimLoko"
+Nele, crie uma classe "Boletim" num pacote "modelo".
 
+Ele deve possuir os atributos privados "nota1", "nota2", "media" e "resultado".
+Os 3 primeiros são números reais e o último é um texto.
+
+Crie 2 métodos públicos sem retorno que alterem a nota1 e nota2.
+
+Sempre que uma das notas for alterada, atualize a media, que é a média aritmética entre as 2 notas.
+
+Sempre que a média for alterada, atualize o resultado. Ele é "Aprovado" quando a média for a partir de 5 e "Reprovado", caso contrário.
+
+Crie um método público que retorna o valor atual da media.
+
+Crie um método público que retorna o valor atual do resultado.
 package modelo;
-
+*/
 
 public class Boletim {
     
