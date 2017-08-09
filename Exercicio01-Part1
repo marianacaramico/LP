@@ -14,7 +14,7 @@ Sempre que a média for alterada, atualize o resultado. Ele é "Aprovado" quando
 Crie um método público que retorna o valor atual da media.
 
 Crie um método público que retorna o valor atual do resultado.
-package modelo;
+package modelo; ...
 */
 
 public class Boletim {
