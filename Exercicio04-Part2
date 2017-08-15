@@ -1,0 +1,21 @@
+
+package app;
+
+import modelo.Biscoito;
+
+public class Guloseimas {
+    
+    public static void main(String[] args) {
+        
+        Biscoito biscoito01 = new Biscoito(20);
+        Biscoito biscoito02 = new Biscoito("chocolate", 35, 20, 2.5);
+        
+        System.out.println("Peso do biscoito 1: "+biscoito01.getPeso());
+        System.out.println("Sabor do biscoito 2: "+biscoito02.getSabor());
+        System.out.println("Peso do biscoito 2: "+biscoito02.getPeso());
+        System.out.println("Calorias por unidade do biscoito 2: "+biscoito02.getCaloriasPorUnidade());
+        System.out.println("Preço do biscoito 2: "+biscoito02.getPreco());
+        
+    }
+    
+}
