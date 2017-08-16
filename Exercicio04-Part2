@@ -1,3 +1,7 @@
+/* ... Crie a classe app.AppGuloseimas
+Ela deve possui um método main. Ao ser invocado, ele deve instanciar 2 objetos do tipo Biscoito, cada um com um construtor diferente.
+Use os getters das instâncias para recuperar e exibir os valores de seus atributos...
+*/
 
 package app;
 
