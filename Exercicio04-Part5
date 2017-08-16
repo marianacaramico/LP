@@ -1,0 +1,60 @@
+/* ... No ProjetoGuloseimas, crie uma classe chamada modelo.GrupoLanches. Nela, crie dois atributos do tipo Lanche, chamados "lanche1" e "lanche2". Encapsule para leitura e escrita ambos.
+
+Ainda nessa classe, crie um método público que retorna o tipo do lanche que possui mais calorias por unidade.  Chame-o de "getLancheMaisCalorico()".
+Caso os valores das calorias sejam iguais, retorne "lanches com o mesmo valor calórico". 
+Caso um dos lanches for nulo, retorne o o tipo do único lanche. 
+Caso os dois lanches forem nulos, retorne "sem lanche configurado".
+Quando o tipo de algum dos lanches for nulo, usar "lanche1" ou "lanche2", conforme o atributo em questão.
+
+Na AppGuloseimas instancie um objeto do tipo GrupoLanches e preencha seus atributos com valores diferentes para testar esse método "getLancheMaisCalorico()".
+*/
+
+package modelo;
+
+
+public class GrupoLanches {
+ 
+    private Lanche lanche01;
+    private Lanche lanche02;
+    
+    public void setLanche01(Lanche lanche01) {
+        this.lanche01 = lanche01;
+    }
+    public Lanche getLanche01() {
+        return lanche01;
+    }
+    public void setLanche02(Lanche lanche02) {
+        this.lanche02 = lanche02;
+    }
+    public Lanche getLanche02() {
+        return lanche02;
+    }
+    
+    public String getLancheMaisCalorico(){
+        Biscoito biscoito01 = new Biscoito("chocolate", 20, 30, 4);
+        Lanche lanche1 = new Lanche("almoço", biscoito01);
+        double calorias01 = biscoito01.getCaloriasPorUnidade();
+        Biscoito biscoito02 = new Biscoito("morango", 15, 25, 3);
+        Lanche lanche2 = new Lanche("lanche", biscoito02);
+        double calorias02 = biscoito02.getCaloriasPorUnidade();
+        String maisCalorico = "";
+        if(calorias01 == calorias02){
+            maisCalorico = "Lanches com mesmo valor calórico.";
+        }
+        if(calorias01 == 0 && calorias02 == 0){
+            maisCalorico = "Sem lanche configurado";
+        }
+        if(calorias01 > calorias02 || calorias02 == 0){
+            maisCalorico = "Lanche mais calórico: lanche 1";
+        }
+        if(calorias01 < calorias02 || calorias01 == 0){
+            maisCalorico = "Lanche mais calórico: lanche 2";
+        }
+        return maisCalorico;
+    }
+
+    
+    
+    
+    
+}
