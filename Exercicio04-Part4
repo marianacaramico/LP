@@ -1,3 +1,6 @@
+/* ... Na AppGuloseimas, instancie 2 objetos do tipo Lanche, cada um com seu construtor.
+Use seus getters para exibir seus valores, inclusive os valores dos seus respectivos biscoitos.
+*/
 
 package app;
 
