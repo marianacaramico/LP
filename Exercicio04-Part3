@@ -1,0 +1,33 @@
+
+package modelo;
+
+
+public class Lanche {
+    
+    private String tipo;
+    private Biscoito biscoitoLanche;
+    
+    public Lanche(String tipo, Biscoito biscoitoLanche){
+        this.tipo = tipo;
+        this.biscoitoLanche = biscoitoLanche;
+    }
+    public Lanche(Biscoito biscoitoLanche){
+        this.biscoitoLanche = biscoitoLanche;
+    }
+        
+    public void setTipo(String tipo){
+        this.tipo = tipo;
+    }
+    public String getTipo(){
+        return this.tipo;
+    }
+    public void setBiscoitoLanche(Biscoito biscoitoLanche){
+        this.biscoitoLanche = biscoitoLanche;
+    }
+    public Biscoito getBiscoitoLanche(){
+        return this.biscoitoLanche;
+    }
+    
+    
+    
+}
