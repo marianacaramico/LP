@@ -1,3 +1,8 @@
+/* ... Ainda no ProjetoGuloseimas, crie a classe modelo.Lanche
+Ele deve possuir um atributo "tipo" encapsulado para leitura e escrita.
+Deve possuir também um atributo do tipo "Biscoito" chamado "biscoitoLanche". Também encapsulado para leitura e escrita.
+Ela deve possuir um construtor que recebe o "tipo" e o "biscoitoLanche" e outro que recebe somente o "biscoitoLanche"...
+*/
 
 package modelo;
 
