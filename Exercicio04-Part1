@@ -1,3 +1,11 @@
+/* Crie o "ProjetoGuloseimas"
+
+Nele, crie a classe modelo.Biscoito
+Ela deve possuir os seguintes atributos de instância privados:
+"sabor", "peso", "caloriasPorUnidade", "preco".
+Todos esses atributos devem estar encapsulados com get e set padrão do Java, menos o "preco", que não poderá ser alterado, só consultado.
+Deve ser possível criar um Biscoito informando somente seu "peso" OU informado todos os atributos de uma só vez...
+*/
 
 package modelo;
 
