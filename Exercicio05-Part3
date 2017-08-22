@@ -1,0 +1,21 @@
+// ... Crie a classe app.AppCreche. No main() dele, teste todos os métodos criados.
+
+package app;
+
+import modelo.Crianca;
+import modelo.Creche;
+
+public class AppCreche {    
+
+    public static void main(String[] args) {        
+
+        Crianca crianca01 = new Crianca("Mariana", 5, "F");
+        Creche creche01 = new Creche();
+        creche01.setNomeCreche("Creche Legal");
+        creche01.addCrianca(crianca01);
+        System.out.println("Média de idade das crianças: "+creche01.getMediaIdadeCriancas());
+        System.out.println("Quantidade de meninas: "+creche01.getQuantidadeMeninas());      
+                
+    }      
+
+}
