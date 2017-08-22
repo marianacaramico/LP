@@ -1,0 +1,46 @@
+/* ... A classe Creche possui os atributos "nomeCreche" e "criancas", que é uma lista do tipo Crianca.
+Encapsule o "nomeCreche" para leitura e escrita, mas só crie get para o "criancas".
+Crie um método público sem retorno "addCrianca" que recebe um objeto do tipo crianca e adiciona à lista "criancas".
+Crie um método público que retorne a média de idade das crianças da creche. Chame-o de "getMediaIdadeCriancas()".
+Crie um método público que retorne a quantidade de MENINAS da creche. Chame-o de "getQuantidadeMeninas()"...
+*/
+
+package modelo;
+
+import java.util.List;
+
+public class Creche {   
+
+    private String nomeCreche;
+    private List<Crianca> criancas;
+
+    public void setNomeCreche(String nomeCreche) {
+        this.nomeCreche = nomeCreche;
+    }
+    public String getNomeCreche() {
+        return nomeCreche;
+    }
+    public List<Crianca> getCriancas() {
+        return criancas;
+    }
+    public void addCrianca(Crianca crianca){
+        this.criancas.add(crianca);
+    }
+    public double getMediaIdadeCriancas(){
+        double media = 0;
+        double total = 0;
+        for(Crianca crianca: this.criancas){
+            total += crianca.getIdade();
+        }
+        media = total / this.criancas.size();
+        return media;
+    }
+    public int getQuantidadeMeninas(){
+        int somaMeninas = 0;
+        for(Crianca crianca: this.criancas){
+            if(crianca.getSexo().equals("F")) somaMeninas++;
+        }
+        return somaMeninas;
+    }     
+
+}
