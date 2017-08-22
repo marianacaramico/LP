@@ -1,0 +1,52 @@
+/* Crie o ProjetoCreche
+Nele, crie um pacote "modelo". Nesse pacote, crie as classes Crianca e Creche.
+
+A classe Crianca deve possuir os atributos "nome", "idade" e "sexo". Encapsule para leitura e escrita todos. 
+Regras para Crianca: 
+  A idade não pode ser menor que 0. Caso tentem usar um valor inválido, nada deve ocorrer.
+  O sexo só pode ser "M" ou "F". Caso tentem usar um valor inválido, nada deve ocorrer.
+Use os setters para implementar essas regras.
+Crie um construtor que receba todos os atributos...
+*/
+
+package modelo;
+
+
+public class Crianca {
+    
+    private String nome;
+    private int idade;
+    private String sexo;    
+
+    public Crianca(String nome, int idade, String sexo){
+        this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+    }    
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setIdade(int idade) {
+        if(idade>0){
+            this.idade = idade;
+        }        
+    }
+    public int getIdade() {
+        return idade;
+    }
+    public void setSexo(String sexo) {
+        if(sexo.equals("F") || sexo.equals("M")){
+            this.sexo = sexo;
+        }        
+    }
+    public String getSexo() {
+        return sexo;
+    }   
+        
+
+}
+
