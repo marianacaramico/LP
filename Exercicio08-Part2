@@ -1,0 +1,63 @@
+/* No ProjetoHerancas2, no mesmo pacote "modelo", crie as seguintes classes:
+
+Investimento (abstrata)
+Poupanca (concreta que estende Investimento)
+TesouroDireto (concreta que estende Investimento)
+
+A Investimento deve possuir o atributo do tipo double "valor". Ele deve estar encapsulado com get e set concretos. 
+Ela deve possuir um método abstrato que retorna um double chamado "getTaxaRendimento()".
+
+A classe Poupanca deve retornar o valor 0.75 e a TesouroDireto 1.1 nas suas respectivas implementações do método "getTaxaRendimento()".
+
+A classe Investimento deve ainda possuir um método concreto sem retorno chamado "render()".
+Sempre que for invocado, ele aumenta o valor conforme o sua taxa.
+Sua taxa é o que retorna no método "getTaxaRendimento()"
+*/
+
+package br.com.bandtec.modelo;
+
+
+public abstract class Investimento {
+  
+    private double valor;
+    
+    public void setValor(double valor){
+        this.valor = valor;
+    }
+    public double getValor(){
+        return this.valor;
+    }
+    public abstract double getTaxaRendimento();
+    public void render(){
+        this.valor += (this.valor*this.getTaxaRendimento())/100.0;
+    }
+    
+}
+
+---------------
+
+package br.com.bandtec.modelo;
+
+
+public class Poupanca extends Investimento {
+
+    @Override
+    public double getTaxaRendimento() {
+        return 0.75;
+    }
+    
+}
+
+------------------
+
+package br.com.bandtec.modelo;
+
+
+public class TesouroDireto extends Investimento {
+
+    @Override
+    public double getTaxaRendimento() {
+        return 1.1;
+    }
+   
+}
