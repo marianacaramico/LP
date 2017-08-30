@@ -1,0 +1,53 @@
+/* Crie a classe br.com.bandtec.app.AppJogoBriga
+Nele, crie um método main()
+Instancie 2 "Lutador", cada um de uma de suas implementações concretas.
+Os valores de vida e força de ambos você deve coletar junto ao usuário.
+
+Começe então a porrada! Enquanto ambos os lutadores estiverem vivos, pergunte ao usuário quem golpeou, se o forte ou o fraco.
+Após a porrada, exiba a vida de ambos os lutadores.
+Quando um dos 2 "for para a glória", exibir: 
+"K.O.! Lutador <forte/fraco> venceu após aplicar X golpes!"
+*/
+
+package br.com.bandtec.app;
+
+import br.com.bandtec.modelo.LutadorForte;
+import br.com.bandtec.modelo.LutadorFraco;
+import br.com.bandtec.modelo.Lutador;
+import java.util.Scanner;
+
+public class AppJogoBriga {
+    
+    public static void main(String[] args) {
+        
+        Scanner leitor = new Scanner(System.in);
+        System.out.print("Qual a vida do lutador 1? ");
+        double vida01 = leitor.nextDouble();        
+        System.out.print("E a força do lutador 1? ");
+        double forca01 = leitor.nextDouble();
+        System.out.print("Qual a vida do lutador 2? ");
+        double vida02 = leitor.nextDouble();        
+        System.out.print("E a força do lutador 2? ");
+        double forca02 = leitor.nextDouble();
+        Lutador lutador01 = new LutadorForte(vida01, forca01);
+        Lutador lutador02 = new LutadorFraco(vida02, forca02);
+        int count01 = 0;
+        int count02 = 0;
+        while(lutador01.getVida() > 0 && lutador02.getVida() > 0){
+            System.out.println("Quem golpeou? 1 ou 2?");
+            int golpe = leitor.nextInt();
+            switch(golpe){
+                case 1: lutador02.receberGolpe(lutador01.aplicarGolpe());
+                        count01++;
+                    break;
+                case 2: lutador01.receberGolpe(lutador02.aplicarGolpe());
+                        count02++;
+                    break;
+            }
+        }
+        if(lutador01.isMorto()) System.out.println("K.O.! Lutador 2 venceu após aplicar "+count02+" golpes!");
+        else System.out.println("Fim de papo! Lutador 1 venceu após "+count01+" golpes!");
+        
+    }
+    
+}
