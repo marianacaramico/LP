@@ -1,0 +1,40 @@
+/* Crie o "ProjetoLutadores" e, nele crie a classe ABSTRATA br.com.bandtec.modelo.Lutador
+Ela deve conter os atributos "vida" e "forca" do tipo double. A "vida" deve ser encapsulada somente com get. e a "forca" não deve ter get nem set. Esses atributos devem ser informados no construtor da classe.
+Crie o método público sem retorno "receberGolpe" que recebe por parâmetro um valor double que seria a "força" do golpe recebido. Ao receber o golpe, a "vida" reduz conforme essa força. A vida não pode se tornar menor que 0 (zero).
+Crie um método público e abstrato "aplicarGolpe()" que retorna um valor double.
+*/
+
+package br.com.bandtec.modelo;
+
+
+public abstract class Lutador {
+  
+    private double vida;
+    protected double forca;
+   
+    public Lutador(double vida, double forca){
+        this.vida = vida;
+        this.forca = forca;
+    }
+    
+    public double getVida(){
+        return this.vida;
+    }  
+    public void receberGolpe(double forca){
+        if(this.vida>forca){
+            this.vida -= forca;
+        }        
+        else this.vida = 0;  
+        //this.vida -= Math.min(this.vida, forca)
+        //this.vida = this.vida > forca ? this.vida -= forca : 0;
+    }    
+    public boolean isVivo(){
+        return this.vida > 0;
+    }
+    public boolean isMorto(){
+        return this.vida == 0;
+        //return !isVivo()
+    }
+    public abstract double aplicarGolpe();
+   
+}
