@@ -1,0 +1,68 @@
+
+package br.com.bandtec.modelo;
+
+
+public abstract class JogadorFutebol {
+    
+    public abstract void chutar();
+    
+    public void aquecer() {
+        System.out.println("Jogador fazendo aquecimento");
+    }
+          
+}
+
+/* No ProjetoHerancas2, crie 3 classes concretas como implementações da JogadorFutebol, no mesmo pacote. São elas:
+Atacante, Lateral e Meia.
+Use as frases que quiser no método de chute.
+
+Apenas a Atacante deve sobrescrever o método "aquecer". Use a mensagem que preferir.
+
+Na AppFutebol instancie mais 3 objetos do tipo JogadorFutebol, instanciando cada um como um dos novos tipos aqui criados.
+Invoque os métodos de chute e aquecimento.
+*/
+
+package br.com.bandtec.modelo;
+
+
+public class Atacante extends JogadorFutebol {
+
+    @Override
+    public void aquecer() {
+        System.out.println("Jogador se preparando!");
+    }
+
+    @Override
+    public void chutar() {
+        System.out.println("Atacante dando um chutão");
+    }
+   
+}
+
+---------------
+
+package br.com.bandtec.modelo;
+
+
+public class Lateral extends JogadorFutebol {
+
+    @Override
+    public void chutar() {
+        System.out.println("Lateral dando um chutão");
+    }
+    
+}
+
+----------------------
+
+package br.com.bandtec.modelo;
+
+
+public class Meia extends JogadorFutebol {
+   
+    @Override
+    public void chutar() {
+        System.out.println("Meia dando um chutão");
+    }
+    
+}
