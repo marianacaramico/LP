@@ -1,4 +1,11 @@
-
+// Crie uma classe Java chamada IdadeApp, no pacote app do projeto "datashoras".
+Nessa classe, pergunte ao usuário que informe a Data de Fabricação de um produto (formato dd-mm-aaaa) e quantos dias ele vale.
+Ao final, exiba:
+"Este produto vence em XX/XX/XXXX", caso a data de vencimento seja uma data futura.
+Ou
+"Este produto já venceu em XX/XX/XXXX", caso a data de vencimento seja uma data passada.
+//
+    
 package br.com.bandtec.datahora.app;
 
 import java.text.ParseException;
